@@ -1,0 +1,44 @@
+html {
+    background: #018DED url(https://pixabay.com/get/57e0d4474f54a914ea9d8579c32f347b1636c3e45656744b742c78d495/dragon-1014565.jpg);
+    background-size: cover;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+}
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    min-height: 100vh;
+    align-items: center;
+}
+.clock {
+    
+    margin-right: 30px;
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid rgba(224, 79, 12, 0.918);
+    border-radius: 50%;
+    
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px black,
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
+}
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+}
+.hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+}
