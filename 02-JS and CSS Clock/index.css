@@ -18,7 +18,7 @@ body {
     margin-right: 30px;
     width: 30rem;
     height: 30rem;
-    border: 20px solid rgba(224, 79, 12, 0.918);
+    border: 20px solid rgba(224, 72, 12, 0.918);
     border-radius: 50%;
     
     position: relative;
@@ -30,6 +30,7 @@ body {
     0 0 10px rgba(0,0,0,0.2);
 }
 .clock-face {
+
     position: relative;
     width: 100%;
     height: 100%;
@@ -38,7 +39,12 @@ body {
 .hand {
     width: 50%;
     height: 6px;
-    background: black;
+
+    background-image: linear-gradient(to right,rgb(83, 16, 16),rgba(224, 72, 12, 0.918));/*plynna zmiana koloru*/
     position: absolute;
     top: 50%;
+    transform-origin: 100%;/*definiujemy srodek obiektu-> domyslne 50% srodek obiektu 3 zmienne-> 3 osie*/
+    transform:rotate(90deg);
+    transition:  all 0.05;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
