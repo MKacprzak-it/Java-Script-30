@@ -1,7 +1,20 @@
-
-/*
-    misc styles, nothing to do with CSS variables
-*/
+:root{
+    --base:white;
+    --spacing: 10px;
+    --blur: 30px;
+    --degree:0deg;
+}
+img{
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+    transition: all;
+    transform: rotate3d(0,1,0,var(--degree));
+    
+}
+.hl{
+    color: var(--base);
+}
 body {
     text-align: center;
     background: #193549;
