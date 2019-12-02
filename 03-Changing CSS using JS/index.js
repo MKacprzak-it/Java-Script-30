@@ -5,3 +5,11 @@ function update(){
 }
 inputs.forEach(input => input.addEventListener('change',update));
 inputs.forEach(input => input.addEventListener('mousemove',update));
+
+let degreeX=0;
+function rotatingX(){
+    degreeX+=5;
+    const suffix1=document.querySelector('.title').dataset.sizing;
+    document.documentElement.style.setProperty(`--degreeX`,degreeX+suffix1);
+}
+setInterval(rotatingX,60);

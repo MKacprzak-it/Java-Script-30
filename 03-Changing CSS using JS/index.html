@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
+  <div class="title" data-sizing="deg"><h2>Update CSS Variables with <span class='hl'>JS</span></h2></div>
 
   <div class="controls">
     <label for="spacing">Spacing:</label>
@@ -16,15 +16,26 @@
     <input id="blur" type="range" name="blur" min="0" max="50" value="10" data-sizing="px">
 
     <label for="rotate">Rotate</label>
-    <input id="rotate" type="range" name="degree" min="0" max="360" value="180" data-sizing="deg">
+    <input id="rotate" type="range" name="degreeY" min="-360" max="360" value="0" data-sizing="deg">
+
+    <label for="brightness">Brightness</label>
+    <input id="brightness" type="range" name="bright" min="0" max="200" value="100" data-sizing="%">
 
     <label for="base">Base Color</label>
     <input id="base" type="color" name="base" value="#ffc600">
+   
     
   </div>
-
-  <img src="src/dragon-1721875_640.png">
-
+  <div class="box">
+      <div class="box-inner">
+        <div class="front">
+          <img src="src/fantasy-2231796_640.jpg">
+        </div>
+        <div class="back">
+            <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+        </div>
+      </div>
+    </div>
   
   <script src="index.js"></script>
 
