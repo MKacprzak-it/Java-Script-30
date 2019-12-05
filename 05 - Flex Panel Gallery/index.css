@@ -1,3 +1,4 @@
+/*ogarnac magie ccs-a*/
 html {
 box-sizing: border-box;
 background: #ffc600;
@@ -16,13 +17,13 @@ box-sizing: inherit;
 .panels {
 min-height: 100vh;
 overflow: hidden;
+display: flex;
 }
 .panel {
 background: #6B0F9C;
 box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
 color: white;
 text-align: center;
-align-items: center;
 /* Safari transitionend event.propertyName === flex */
 /* Chrome + FF transitionend event.propertyName === flex-grow */
 transition:
@@ -32,6 +33,12 @@ transition:
 font-size: 20px;
 background-size: cover;
 background-position: center;
+flex: 1;
+justify-content: center;
+align-items: center;
+display: flex;
+flex-direction:  column;
+
 }
 .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
 .panel2 { background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
@@ -43,6 +50,22 @@ background-position: center;
 margin: 0;
 width: 100%;
 transition: transform 0.5s;
+flex: 1 0 auto;
+display:  flex;
+justify-content: center;
+align-items: center;
+}
+.panel > *:first-child{
+    transform :translateY(-100%);
+}
+.panel > *:last-child{
+    transform :translateY(100%);
+}
+.panel.open-active > *:last-child{
+    transform :translateY(0);
+}
+.panel.open-active > *:first-child{
+    transform :translateY(0);
 }
 .panel p {
 text-transform: uppercase;
@@ -55,5 +78,6 @@ font-size: 2em;
 font-size: 4em;
 }
 .panel.open {
-font-size: 40px;
+    flex:5;
+    font-size: 40px;
 }
