@@ -35,3 +35,5 @@ console.log(indexOfCommentWithID);
 comments.splice(indexOfCommentWithID,1);
 console.log(comments);
 
+
+
